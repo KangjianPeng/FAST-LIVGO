@@ -42,7 +42,7 @@ package independently maintained and source its install space before building:
 
 ```text
 coolfly_project/
-|-- ros2_ws/src/fast_livgo/
+|-- src/fast_livgo/
 `-- <separate gnss_comm workspace>/install/
 ```
 
@@ -55,7 +55,7 @@ separate workspace, pass its generated setup script through `GNSS_COMM_SETUP`:
 source /opt/ros/jazzy/setup.bash
 GNSS_COMM_SETUP=/path/to/gnss_comm_ws/install/setup.bash \
   ./scripts/setup_ws.sh
-source ros2_ws/install/setup.bash
+source install/setup.bash
 ```
 
 ## Run the provided datasets
@@ -68,7 +68,7 @@ handheld `HH-LVGO` dataset and the AGV launch file for the vehicle-mounted
 ```bash
 source /opt/ros/jazzy/setup.bash
 source /path/to/gnss_comm_ws/install/setup.bash
-source /path/to/coolfly_project/ros2_ws/install/setup.bash
+source /path/to/coolfly_project/install/setup.bash
 
 ros2 launch fast_livgo mapping_hh.launch.py \
   rviz:=true output_dir:=~/.ros/fast_livgo_rtk/hh
@@ -83,7 +83,7 @@ Play the corresponding converted ROS 2 bag in another sourced terminal:
 ```bash
 source /opt/ros/jazzy/setup.bash
 source /path/to/gnss_comm_ws/install/setup.bash
-source /path/to/coolfly_project/ros2_ws/install/setup.bash
+source /path/to/coolfly_project/install/setup.bash
 ros2 bag play /path/to/HH-LVGO-01_ros2
 ```
 
