@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>vikit_ros</name>
+  <version>0.0.0</version>
+  <description>The vikit_ros package</description>
+
+  <!-- One maintainer tag required, multiple allowed, one person per tag -->
+  <maintainer email="forster@ifi.uzh.ch">cforster</maintainer>
+
+  <!-- One license tag required, multiple allowed, one license per tag -->
+  <license>GPLv3</license>
+
+  <!-- Buildtool dependencies are required for the build process -->
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- Dependencies for building and running the package -->
+  <depend>rclcpp</depend>
+  <depend>vikit_common</depend>
+  <depend>tf2</depend>  <!-- ROS 2 uses tf2 instead of tf -->
+  <depend>visualization_msgs</depend>
+  <depend>OpenCV</depend>
+  <depend>Eigen3</depend>
+  <depend>Sophus</depend>
+
+  <!-- The export tag contains other, unspecified, tags -->
+  <export>
+    <!-- You can specify that this package is a metapackage here: -->
+    <!-- <metapackage/> -->
+  </export>
+</package>
